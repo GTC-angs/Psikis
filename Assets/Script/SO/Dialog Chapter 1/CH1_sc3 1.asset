@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee29739684e2e940988f8ffab9e59ac, type: 3}
+  m_Name: CH1_sc3 1
+  m_EditorClassIdentifier: 
+  id: 2
+  word_ID:
+  - ...\n
+  - Ada yang tidak beres...\n
+  - kamu merasakan itu Kaila?
+  word_ENG: []
+  typeDialog: 0
+  audioVoiceOffer_ID: {fileID: 8300000, guid: 443bab27e9434c84d86a2024c2ba36a0, type: 3}
+  audioVoiceOffer_ENG: {fileID: 8300000, guid: 3e91648d7cdbb0a4b86cc85acd347404, type: 3}
+  isLoop: 1
+  volume: 1
+  pitch: 1
+  imageActor: {fileID: 2800000, guid: 02d5de1ebc21d894a9a31e58fc86f6f4, type: 3}
+  nameActor: Arka
+  expresionActor: 2
+  widthTextureCharacter: 364
+  heightTextureCharacter: 336
+  positionTextureCharacter: 1
+  positionTexture: {x: 0, y: 0, z: 0}
+  isIncludeTexture: 0
+  isIcludeAmbientSound: 0
+  imageWorld: {fileID: 0}
+  widthTexture: 0
+  heightTexture: 0
+  ambientAudio: {fileID: 0}
+  customEventDialog:
+    m_PersistentCalls:
+      m_Calls: []

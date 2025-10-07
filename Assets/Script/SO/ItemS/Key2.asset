@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3877a4b8907267241be8062702deec40, type: 3}
+  m_Name: Key2
+  m_EditorClassIdentifier: 
+  id: 2
+  count: 1
+  maxStackable: 9
+  name: Silver key
+  deskripsi: Use this key to open the drawer in basement
+  isStackable: 1
+  texture: {fileID: 2800000, guid: b5bf3a8dbffaefa4aa5644f4b31af2c3, type: 3}
