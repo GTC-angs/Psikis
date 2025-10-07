@@ -42,6 +42,7 @@ public class SlotScript : MonoBehaviour
                         Debug.Log('B');
                         // masi ada slot stack
                         itemInInventory.count += 1;
+
                         countItemText.text = itemInInventory.count.ToString();
                         return true;
                     }
@@ -62,6 +63,8 @@ public class SlotScript : MonoBehaviour
             Debug.Log('D');
             ItemSO newItem = CreateNewItemSO(item);
             // countItemText.text = newItem.count.ToString();
+
+            if (!newItem.isStackable) countItemText.text = ""; // jika item tidak bisa distack jangan tampilkan UI count
 
             InventorySystem.Instance.itemListOnInventory.Add(newItem);
             isEmpty = false;

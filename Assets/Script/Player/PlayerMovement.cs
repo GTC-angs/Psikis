@@ -3,13 +3,18 @@ using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance;
     public enum path { Top, Down, Left, Right };
-    bool isCanMoveInput = true;
+    public bool isCanMoveInput = true, isMove = false;
     bool isRunning = false;
     [SerializeField] float speedCharacterMoveTransition = 0.2f;
     [SerializeField] LayerMask collisionMaskObstacle; // layer dinding/halangan
     [SerializeField] float rayDistance = 1f, runningSpeedTransition;    // jarak ray sesuai step per move
 
+    void Start()
+    {
+        Instance = this;
+    }
 
     void Update()
     {
@@ -27,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleDirectionMove(path pathDirection)
     {
+        if (!isCanMoveInput) return;
         Vector3 direction = Vector3.zero;
 
         switch (pathDirection)
@@ -43,12 +49,17 @@ public class PlayerMovement : MonoBehaviour
         if (hit.collider == null) // tidak ada halangan
         {
             float speed = 1f;
+            isMove = true;
 
             isCanMoveInput = false;
             Vector3 targetPos = transform.position + direction * speed;
 
             transform.DOMove(targetPos, isRunning ? speedCharacterMoveTransition - runningSpeedTransition : speedCharacterMoveTransition)
-                     .OnComplete(() => isCanMoveInput = true);
+                     .OnComplete(() =>
+                     {
+                         isCanMoveInput = true;
+                         isMove = false;
+                     });
         }
         else
         {

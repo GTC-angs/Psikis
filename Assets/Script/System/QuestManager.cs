@@ -9,7 +9,7 @@ using System;
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance;
-    public QuestSO activeQuest;
+    public QuestSO activeQuest; // quest yang sedang berjalan
     public string keyOnCompleted;
 
 
@@ -33,10 +33,11 @@ public class QuestManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    // Quest itu kita cuma add active to list ativeMission
-    // abistu uat method untuk ubah progress quest
-    // didalamnya di cek juga apakah suda selesai
-
+    /// <summary>
+    /// fungsi yang berfungsi untuk menambahkan quest menjadi quest active.
+    /// di set public agar bisa berkomunikasi di file lain dengan lebh fleksibel
+    /// </summary>
+    /// <param name="quest"></param>
     public void AddQuestToActive(QuestSO quest)
     {
         if (activeQuest != null)
@@ -52,16 +53,20 @@ public class QuestManager : MonoBehaviour
         UpdateUIQuest();
     }
 
+    /// <summary>
+    /// Fungsi yang dipanggil ketika terjadi perubahan dengan progress Quest
+    /// </summary>
     void UpdateUIQuest()
     {
-        if (activeQuest) CG_questContainer.alpha = 1f;
-        else
+        if (activeQuest) CG_questContainer.alpha = 1f; // jika ada activeQuest yang aktif
+        else // jika tidak matikan alpha
         {
             CG_questContainer.alpha = 0f;
             return;
         }
 
         string progressText = "";
+
         if (activeQuest.isShowProgress)
             progressText = $" , {activeQuest.currentCount} / {activeQuest.requiredCount}";
 
@@ -69,6 +74,12 @@ public class QuestManager : MonoBehaviour
         textQuestHint.text = activeQuest.questHint;
     }
 
+    /// <summary>
+    /// sebuah fungsi untuk menambahkn progress ke dalam quest kita.
+    /// mengupdate UI dan menegecek kondisi selesai/blm.
+    /// </summary>
+    /// <param name="IDKey"></param>
+    /// <param name="countProgress"></param>
     public void UpdateQuest(string IDKey, int countProgress = 1)
     {
         if (activeQuest == null) return;
@@ -76,14 +87,19 @@ public class QuestManager : MonoBehaviour
         activeQuest.currentCount += countProgress;
         // update UI
         UpdateUIQuest();
+
         // cek currentCount >= target
         if (activeQuest.currentCount >= activeQuest.requiredCount)
         {
             StartCoroutine(CompletedQuest(activeQuest));
         }
-        // jika true, silang teks dan fadeout dan call invoke
     }
 
+    /// <summary>
+    /// Fungsi animasi ketika quest telah selesai terpenuhi
+    /// </summary>
+    /// <param name="quest"></param>
+    /// <returns></returns>
     IEnumerator CompletedQuest(QuestSO quest)
     {
         quest.OnQuestCompleted?.Invoke();

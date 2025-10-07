@@ -3,9 +3,11 @@ using UnityEngine;
 public class UpdateProgressQuest : MonoBehaviour
 {
 
+    //  script untuk update prigress (ceritanya)
+
     [SerializeField] string KeyID_quest;
-    [SerializeField] EventProgress typeProgress;
-    [SerializeField] int amountProgress;
+    [SerializeField] EventProgress typeProgress; // pilih type interaksi
+    [SerializeField] int amountProgress; // amount progress
     enum EventProgress
     {
         CollisionEnter2d,

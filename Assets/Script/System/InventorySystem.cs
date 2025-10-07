@@ -39,11 +39,16 @@ public class InventorySystem : MonoBehaviour
 
     public void OpenInventory()
     {
+        if (PlayerMovement.Instance.isMove) return;
+        
         CG_Inventory.alpha = 1f;
         CG_Inventory.blocksRaycasts = true;
         CG_Inventory.interactable = true;
 
         isOpen = true;
+
+        // turn off player movement
+        PlayerMovement.Instance.isCanMoveInput = false;
     }
 
     public void CloseInventory()
@@ -58,6 +63,9 @@ public class InventorySystem : MonoBehaviour
         CG_detailItem.interactable = false;
 
         isOpen = false;
+
+        // turn on player movement
+        PlayerMovement.Instance.isCanMoveInput = true;
     }
 
     public void GetItemOnGround(ItemSO item, Action callback)

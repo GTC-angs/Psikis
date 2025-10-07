@@ -75,6 +75,10 @@ public class DialogManager : MonoBehaviour
         Debug.Log("Finish dialogue..");
     }
 
+    /// <summary>
+    /// funsgi yang akan dijalankan pertama kali dan fungsi 
+    /// yang akan dijalankan setiap kali questIndex bertambah ++
+    /// </summary>
     public void PlayDialog()
     {
         DialogSO dialog = listDialogScene[indexDialog];
