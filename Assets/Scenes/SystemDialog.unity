@@ -614,6 +614,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a6d0d22420a269141a1afc2a121d4031, type: 2}
   - {fileID: 11400000, guid: c95fe9dcf32635b4e82def8aaa65e617, type: 2}
   - {fileID: 11400000, guid: 86e3d56cf21d3d94ba737ccdad4ddd32, type: 2}
+  indexDialog: 0
   dialogTextCharacter: {fileID: 1814575864}
   dialogTextWorld: {fileID: 569743085}
   characterNameTextLeft: {fileID: 551730529}
@@ -703,7 +704,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 2
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1090,6 +1091,7 @@ GameObject:
   - component: {fileID: 1405339581}
   - component: {fileID: 1405339580}
   - component: {fileID: 1405339583}
+  - component: {fileID: 1405339584}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1215,6 +1217,30 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1405339584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405339579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f49bd9026e54f3140bf12112bc63a7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroups: {fileID: 1873907112}
+  fadeDuration: 0.5
+  dialogue: {fileID: 222501751}
+  fade:
+  - fadeIndex: 2
+    fadeCondition: 1
+  - fadeIndex: 5
+    fadeCondition: 2
+  - fadeIndex: 6
+    fadeCondition: 1
+  - fadeIndex: 7
+    fadeCondition: 2
 --- !u!1 &1517785955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,7 +1892,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1887,7 +1913,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2061,6 +2087,7 @@ GameObject:
   - component: {fileID: 1873907110}
   - component: {fileID: 1873907109}
   - component: {fileID: 1873907108}
+  - component: {fileID: 1873907112}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2154,6 +2181,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &1873907112
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873907107}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1942549164
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,8 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     public List<DialogSO> listDialogScene;
-    int indexDialog = 0, indexBoxDialog = 0, countBoxDialog;
+    public int indexDialog = 0;
+    int indexBoxDialog = 0, countBoxDialog;
     bool isDialog = false, isCanClickNextDialog = false, isFinishDialog = false;
     DialogSO currentDialog;
 
@@ -38,6 +39,7 @@ public class DialogManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log(indexDialog);
             if (!isCanClickNextDialog) return;
 
             isCanClickNextDialog = false; // agar ga di spam
