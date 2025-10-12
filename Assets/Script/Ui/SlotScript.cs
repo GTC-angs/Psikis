@@ -18,6 +18,22 @@ public class SlotScript : MonoBehaviour
         countItemText.text = "";
     }
 
+    public void UpdateUiCountItem()
+    {
+        if (itemSO.count >= 1)
+        {
+            countItemText.text = itemSO.count.ToString();
+        }
+        else
+        {
+            canvasGroup.alpha = 0f;
+            textureIconItem.texture = null;
+            countItemText.text = "";
+            isEmpty = true;
+        }
+         
+    }
+
     public bool AddItemToSlot(ItemSO item)
     {
         canvasGroup.alpha = 1f;

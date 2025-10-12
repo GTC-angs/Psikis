@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7c7af81f4864548a8b0872d4da69c2, type: 3}
+  m_Name: comic1Sc_2
+  m_EditorClassIdentifier: 
+  texture: {fileID: 2800000, guid: bb1779e5715378749bd95faf330d9f87, type: 3}
+  audioClip: {fileID: 8300000, guid: 150d09d01f35558419f5ced0c83b4c40, type: 3}
+  isPlayAudio: 1
+  isAudioLoop: 1
