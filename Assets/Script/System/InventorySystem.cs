@@ -9,7 +9,7 @@ public class InventorySystem : MonoBehaviour
     public static InventorySystem Instance;
     public ItemSO currentItemDetail;
     public List<ItemSO> itemListOnInventory;
-    [SerializeField] List<SlotScript> listSlotScript;
+    public List<SlotScript> listSlotScript;
     bool isOpen = false;
 
     [Header("===UI===")]
@@ -37,10 +37,11 @@ public class InventorySystem : MonoBehaviour
         }
     }
 
+
     public void OpenInventory()
     {
         if (PlayerMovement.Instance.isMove) return;
-        
+
         CG_Inventory.alpha = 1f;
         CG_Inventory.blocksRaycasts = true;
         CG_Inventory.interactable = true;

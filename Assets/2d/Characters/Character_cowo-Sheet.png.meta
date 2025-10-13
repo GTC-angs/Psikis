@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: 8d562b1fa4e837f4b923218d4fd2ea80
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1134611435889006619
+    second: Character_cowo-Sheet_0
+  - first:
+      213: 7937589922670791641
+    second: Character_cowo-Sheet_1
+  - first:
+      213: 4209601286180489078
+    second: Character_cowo-Sheet_2
+  - first:
+      213: 965773353769870372
+    second: Character_cowo-Sheet_3
+  - first:
+      213: 2476311192219680446
+    second: Character_cowo-Sheet_4
+  - first:
+      213: -357594495320669629
+    second: Character_cowo-Sheet_5
+  - first:
+      213: 55269311200148694
+    second: Character_cowo-Sheet_6
+  - first:
+      213: 1500721776653017920
+    second: Character_cowo-Sheet_7
+  - first:
+      213: -8984944826055853218
+    second: Character_cowo-Sheet_8
+  - first:
+      213: 6176557652472528763
+    second: Character_cowo-Sheet_9
+  - first:
+      213: 4168793126463097509
+    second: Character_cowo-Sheet_10
+  - first:
+      213: 4687405377215294617
+    second: Character_cowo-Sheet_11
+  - first:
+      213: 2418714817756690802
+    second: Character_cowo-Sheet_12
+  - first:
+      213: -8356120464630360132
+    second: Character_cowo-Sheet_13
+  - first:
+      213: 2215451856496667957
+    second: Character_cowo-Sheet_14
+  - first:
+      213: 7768758998566680798
+    second: Character_cowo-Sheet_15
+  - first:
+      213: 1579268841057107583
+    second: Character_cowo-Sheet_16
+  - first:
+      213: -2090092516033551807
+    second: Character_cowo-Sheet_17
+  - first:
+      213: 3427576173598668020
+    second: Character_cowo-Sheet_18
+  - first:
+      213: 6299405206673946212
+    second: Character_cowo-Sheet_19
+  - first:
+      213: -2449019529391653727
+    second: Character_cowo-Sheet_20
+  - first:
+      213: 4722081076121108674
+    second: Character_cowo-Sheet_21
+  - first:
+      213: 4829196969090021911
+    second: Character_cowo-Sheet_22
+  - first:
+      213: 836786886182059417
+    second: Character_cowo-Sheet_23
+  - first:
+      213: -94506100553803540
+    second: Character_cowo-Sheet_24
+  - first:
+      213: -8328713643684641273
+    second: Character_cowo-Sheet_25
+  - first:
+      213: -1808225492794644308
+    second: Character_cowo-Sheet_26
+  - first:
+      213: -2981624514956002570
+    second: Character_cowo-Sheet_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 192
+        width: 37
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e76db519ec0140f0800000000000000
+      internalID: -1134611435889006619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 33
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9db4381cafbf72e60800000000000000
+      internalID: 7937589922670791641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 193
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677c0dcf0128b6a30800000000000000
+      internalID: 4209601286180489078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 193
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 424adf49fbd176d00800000000000000
+      internalID: 965773353769870372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 193
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebef395c8ef9d5220800000000000000
+      internalID: 2476311192219680446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 192
+        width: 33
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 342c6cc73b1990bf0800000000000000
+      internalID: -357594495320669629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 192
+        width: 37
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dcb01d452b54c000800000000000000
+      internalID: 55269311200148694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 128
+        width: 37
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 043a8143182a3d410800000000000000
+      internalID: 1500721776653017920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 128
+        width: 33
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5bf474f8401f4380800000000000000
+      internalID: -8984944826055853218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 129
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f785ac57a87b550800000000000000
+      internalID: 6176557652472528763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 129
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa4ce4e2478ad930800000000000000
+      internalID: 4168793126463097509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 129
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c6c2b0b520d0140800000000000000
+      internalID: 4687405377215294617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 128
+        width: 33
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2797c55df40019120800000000000000
+      internalID: 2418714817756690802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 128
+        width: 37
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7d555c5b8190c80800000000000000
+      internalID: -8356120464630360132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 65
+        width: 31
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53da67bb9bddebe10800000000000000
+      internalID: 2215451856496667957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 65
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8bf27062d20db60800000000000000
+      internalID: 7768758998566680798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 65
+        width: 31
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e3d04c4a0bae510800000000000000
+      internalID: 1579268841057107583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 65
+        width: 31
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1422e123eef7ef2e0800000000000000
+      internalID: -2090092516033551807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 64
+        width: 31
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4f0fbae52319f20800000000000000
+      internalID: 3427576173598668020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 65
+        width: 31
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 466fb08e8abfb6750800000000000000
+      internalID: 6299405206673946212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 64
+        width: 31
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1acbd96a6b5530ed0800000000000000
+      internalID: -2449019529391653727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c00bc658b3388140800000000000000
+      internalID: 4722081076121108674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71af005ae01c40340800000000000000
+      internalID: 4829196969090021911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1
+        width: 30
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d369f4d3ddc9b00800000000000000
+      internalID: 836786886182059417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1
+        width: 31
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce81267c33f30bef0800000000000000
+      internalID: -94506100553803540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 0
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7064a3881177a6c80800000000000000
+      internalID: -8328713643684641273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1
+        width: 31
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca86b24ae74e7e6e0800000000000000
+      internalID: -1808225492794644308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_cowo-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 0
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fa737c0d442f96d0800000000000000
+      internalID: -2981624514956002570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Character_cowo-Sheet_0: -1134611435889006619
+      Character_cowo-Sheet_1: 7937589922670791641
+      Character_cowo-Sheet_10: 4168793126463097509
+      Character_cowo-Sheet_11: 4687405377215294617
+      Character_cowo-Sheet_12: 2418714817756690802
+      Character_cowo-Sheet_13: -8356120464630360132
+      Character_cowo-Sheet_14: 2215451856496667957
+      Character_cowo-Sheet_15: 7768758998566680798
+      Character_cowo-Sheet_16: 1579268841057107583
+      Character_cowo-Sheet_17: -2090092516033551807
+      Character_cowo-Sheet_18: 3427576173598668020
+      Character_cowo-Sheet_19: 6299405206673946212
+      Character_cowo-Sheet_2: 4209601286180489078
+      Character_cowo-Sheet_20: -2449019529391653727
+      Character_cowo-Sheet_21: 4722081076121108674
+      Character_cowo-Sheet_22: 4829196969090021911
+      Character_cowo-Sheet_23: 836786886182059417
+      Character_cowo-Sheet_24: -94506100553803540
+      Character_cowo-Sheet_25: -8328713643684641273
+      Character_cowo-Sheet_26: -1808225492794644308
+      Character_cowo-Sheet_27: -2981624514956002570
+      Character_cowo-Sheet_3: 965773353769870372
+      Character_cowo-Sheet_4: 2476311192219680446
+      Character_cowo-Sheet_5: -357594495320669629
+      Character_cowo-Sheet_6: 55269311200148694
+      Character_cowo-Sheet_7: 1500721776653017920
+      Character_cowo-Sheet_8: -8984944826055853218
+      Character_cowo-Sheet_9: 6176557652472528763
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
