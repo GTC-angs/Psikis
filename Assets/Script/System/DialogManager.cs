@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     public List<DialogSO> listDialogScene;
-    public int indexDialog = 0;
+    public int indexDialog = 0; //index dialog aku ganti jadi public biar bisa diakses di UIFade :3
     int indexBoxDialog = 0, countBoxDialog;
     bool isDialog = false, isCanClickNextDialog = false, isFinishDialog = false;
     DialogSO currentDialog;
