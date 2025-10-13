@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+//aduh basah🫃🏼💦🍆
 public class UIFade : MonoBehaviour
 {
     public CanvasGroup canvasGroups; //Reference ke Canvas
@@ -33,7 +34,7 @@ public class UIFade : MonoBehaviour
             else if (fade[fadeLog].fadeCondition == 4) //Set alpha = 0(Membuat object transparan)
                 canvasGroups.alpha = 0;
 
-            fadeLog++;
+            fadeLog++; //Indeks untuk fade bertambah setelah proses fade
         }
     }
 
@@ -60,3 +61,11 @@ public class UIFade : MonoBehaviour
         canvasGroup.alpha = end;
     }
 }
+
+
+                                //===== ISSUE ======//
+/* Jika save load dilakukan dan indeks dialog melebihi nilai dari indeks pertama maka fade tidak akan terjadi
+mungkin akan error "IndexOutOfRangeException".
+
+solusi :-save FadeLog(Pasti berhasil).
+        -Loop FadeLog sampai nilai ke n sama dengan index, "for(fade[fadelog] < dialogueindex); fadelog++;"(Belum aku coba karena malas🧢)*/
