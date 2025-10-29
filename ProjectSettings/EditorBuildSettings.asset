@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/SplashScreen.unity
+    guid: d94dbcfd6ac29114b945eff10768a108
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
@@ -17,6 +20,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/QTESystem.unity
     guid: c074f3fde3ff35d4bb5053e9b888be34
+  - enabled: 1
+    path: Assets/Scenes/InventorySystemScript.unity
+    guid: ff9756740ac2ee34783cce557b935dcc
+  - enabled: 1
+    path: Assets/Scenes/Cutscene001.unity
+    guid: c07c8a275132eb24c9e1aa1a7a9753b2
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: 67ad4a7b1592db944b77ddf4aceba4ff
+  - enabled: 1
+    path: Assets/Scenes/SaveUI.unity
+    guid: 189063528cf71de47b7bdbcb891cf063
+  - enabled: 1
+    path: Assets/Scenes/OptionsUI.unity
+    guid: 35ba4b59a2fd13849929dab971333b67
+  - enabled: 1
+    path: Assets/Audio/CreditUI.unity
+    guid: 7ae4ac275e63e204e9900da5b119c265
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

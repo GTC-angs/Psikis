@@ -141,7 +141,6 @@ public class HUDManager : MonoBehaviour
     {
         Debug.Log("Sudah milih");
         GO_actionList[chooseIndex].Choose();
-
     }
 
 

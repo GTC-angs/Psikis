@@ -361,6 +361,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 599417476723074913, guid: 3fa070d0bb960cd4181b4e40028e1b4f, type: 3}
+      propertyPath: orthographic size
+      value: 2.3
+      objectReference: {fileID: 0}
     - target: {fileID: 745942035550437790, guid: 3fa070d0bb960cd4181b4e40028e1b4f, type: 3}
       propertyPath: m_Name
       value: CameraFollow

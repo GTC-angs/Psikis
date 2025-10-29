@@ -1,2 +1,2 @@
-﻿license: Freeware, Non-Commercial
-link: https://www.fontspace.com/sallenas-grandes-font-f145203
+﻿license: Demo
+link: https://www.fontspace.com/dropline-font-f140114
