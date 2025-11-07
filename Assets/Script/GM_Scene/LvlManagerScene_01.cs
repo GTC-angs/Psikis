@@ -12,7 +12,7 @@ public class LvlManagerScene_01 : MonoBehaviour
     void Start()
     {
         Instance = this;
-        AddListenerToQuestWithKey("quest1", OnQuest_1_Completed);
+        AddListenerToQuestWithKey("quest1");
     }
 
     /// <summary>
@@ -28,7 +28,7 @@ public class LvlManagerScene_01 : MonoBehaviour
     /// </summary>
     /// <param name="key"></param>
     /// <param name="action"></param>
-    public void AddListenerToQuestWithKey(string key, Action action)
+    public void AddListenerToQuestWithKey(string key)
     {
         // search
         QuestSO quest1 = listQuest.Find(q => q.IDKey == key); // change berdasarakn keyID

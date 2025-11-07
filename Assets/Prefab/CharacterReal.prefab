@@ -36,7 +36,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -83,10 +83,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1134611435889006619, guid: 8d562b1fa4e837f4b923218d4fd2ea80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.37, y: 0.64}
@@ -131,12 +131,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCanMoveInput: 1
   isMove: 0
-  speedCharacterMoveTransition: 0.4
+  walkSpeed: 3
+  runSpeed: 5
   collisionMaskObstacle:
     serializedVersion: 2
     m_Bits: 64
-  rayDistance: 1
-  runningSpeedTransition: 0
+  rayDistance: 0
 --- !u!114 &1199112795917586209
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,6 +25,7 @@ public class PlayerAnimationController : MonoBehaviour
     public string currentTrigger { get; private set; }
     void Start()
     {
+        Instance = this;
         animator = gameObject.GetComponent<Animator>();
         currentAnimation = AnimationStat.idle_bottom;
         directionPlayer = DirectionFace.bottom;

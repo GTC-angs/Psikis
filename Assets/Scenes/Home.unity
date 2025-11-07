@@ -273,6 +273,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4281325311
   hoverDuration: 0.6
+  xTransformHover: 0.2
   locationNormal: {x: 0, y: 0, z: 0}
 --- !u!114 &206227765
 MonoBehaviour:
@@ -594,6 +595,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4281325311
   hoverDuration: 0.6
+  xTransformHover: 0.2
   locationNormal: {x: 0, y: 0, z: 0}
 --- !u!114 &327562605
 MonoBehaviour:
@@ -636,7 +638,7 @@ GameObject:
   - component: {fileID: 518860282}
   - component: {fileID: 518860281}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: girl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -651,7 +653,7 @@ RectTransform:
   m_GameObject: {fileID: 518860279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.92, y: 8.92, z: 8.92}
+  m_LocalScale: {x: 9, y: 9, z: 9}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1795226679}
@@ -1158,6 +1160,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4281325311
   hoverDuration: 0.6
+  xTransformHover: 0.2
   locationNormal: {x: 0, y: 0, z: 0}
 --- !u!114 &931520397
 MonoBehaviour:
@@ -1736,6 +1739,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4281325311
   hoverDuration: 0.6
+  xTransformHover: 0.2
   locationNormal: {x: 0, y: 0, z: 0}
 --- !u!114 &1747091443
 MonoBehaviour:
@@ -1920,6 +1924,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4281325311
   hoverDuration: 0.6
+  xTransformHover: 0.2
   locationNormal: {x: 0, y: 0, z: 0}
 --- !u!114 &1755375102
 MonoBehaviour:
@@ -2055,8 +2060,8 @@ RectTransform:
   m_Children:
   - {fileID: 1008345418}
   - {fileID: 655988134}
-  - {fileID: 1781455175}
   - {fileID: 518860280}
+  - {fileID: 1781455175}
   m_Father: {fileID: 2130934642}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2315,8 +2320,8 @@ Canvas:
   m_GameObject: {fileID: 2130934638}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 206633658}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

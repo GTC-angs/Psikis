@@ -7,6 +7,7 @@ public class HoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     TMP_Text tMP_Text;
     [SerializeField] Color32 colorHover = new Color32(255, 255, 255, 255);
     [SerializeField] float hoverDuration = 0.3f;
+    [SerializeField] float xTransformHover = 10f;
     Color colorNormal;
     public Vector3 locationNormal;
 
@@ -18,7 +19,7 @@ public class HoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     }
     public void HoverStart()
     {
-        transform.DOMoveX(locationNormal.x + 10, hoverDuration);
+        transform.DOMoveX(locationNormal.x + xTransformHover, hoverDuration);
         tMP_Text.CrossFadeColor(colorHover, hoverDuration, true, false);
     }
 

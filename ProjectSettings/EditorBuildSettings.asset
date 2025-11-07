@@ -38,6 +38,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Audio/CreditUI.unity
     guid: 7ae4ac275e63e204e9900da5b119c265
+  - enabled: 1
+    path: Assets/Scenes/Scene01.unity
+    guid: 7fdadc473c22fd940b2d97499bed3dad
+  - enabled: 1
+    path: Assets/QuestManager.unity
+    guid: d5c4e6a63dd3cb944bd8007956282c16
+  - enabled: 1
+    path: Assets/Scenes/SystemDialog.unity
+    guid: d0113d2fa94d9fc4784913a9d9b7d863
+  - enabled: 1
+    path: Assets/Cutscene_002.unity
+    guid: 429ea760619e3e14bbc268206147fc2d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

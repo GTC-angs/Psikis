@@ -21,6 +21,7 @@ public class QuestManager : MonoBehaviour
 
     [Header("===Component===")]
     [SerializeField] CanvasGroup CG_questContainer;
+    [SerializeField] Vector3 positionContainer;
 
 
     void Start()
@@ -95,6 +96,11 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+    public void HideQuest()
+    {
+        StartCoroutine(CompletedQuest(activeQuest));
+    }
+
     /// <summary>
     /// Fungsi animasi ketika quest telah selesai terpenuhi
     /// </summary>
@@ -106,17 +112,20 @@ public class QuestManager : MonoBehaviour
         // coret text
         textQuestTitle.fontStyle = FontStyles.Strikethrough;
         // delay
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(0.5f);
 
-        // fade up
-        RT_questContainer.DOMoveY(-10f, 0.6f);
-        CG_questContainer.DOFade(0, 0.6f);
+        // fade down
+        // RT_questContainer.DOMoveY(-40f, 0.8f);
+        CG_questContainer.DOFade(0, 0.5f);
 
         // udate property
         yield return new WaitForSeconds(1f);
         activeQuest = null;
 
         UpdateUIQuest();
-        RT_questContainer.DOMoveY(10f, 0.6f);
+        // RT_questContainer.DOMoveY(10f, 0.6f);
+        textQuestTitle.fontStyle = FontStyles.Normal;
+        // CG_questContainer.gameObject.GetComponent<RectTransform>().position = positionContainer;
+        CG_questContainer.alpha = 0f;
     }
 }

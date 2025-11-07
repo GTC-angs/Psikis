@@ -1,133 +1,136 @@
 using UnityEngine;
-using DG.Tweening;
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement Instance;
+
     public enum path { Top, Down, Left, Right };
+
     public bool isCanMoveInput = true, isMove = false;
     bool isRunning = false, isKnocked = false;
-    [SerializeField] float speedCharacterMoveTransition = 0.2f;
-    [SerializeField] LayerMask collisionMaskObstacle; // layer dinding/halangan
-    [SerializeField] float rayDistance = 1f, runningSpeedTransition;    // jarak ray sesuai step per move
+
+    [SerializeField] float walkSpeed = 3f;
+    [SerializeField] float runSpeed = 5f;
+    [SerializeField] LayerMask collisionMaskObstacle;
+    [SerializeField] float rayDistance = 0.5f;
+
     PlayerAnimationController animator;
     Rigidbody2D rb;
+
+    Vector2 moveInput;
+
     void Start()
     {
         Instance = this;
-        rb = gameObject.GetComponent<Rigidbody2D>();
-        animator = gameObject.GetComponent<PlayerAnimationController>();
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<PlayerAnimationController>();
     }
 
     void Update()
     {
-        // running state
+        if (isKnocked) return;
+
+        // Toggle running
         if (Input.GetKeyDown(KeyCode.LeftShift)) isRunning = true;
         else if (Input.GetKeyUp(KeyCode.LeftShift)) isRunning = false;
 
-        // if (!isCanMoveInput) return;
+        // Arah input
+        float moveX = 0;
+        float moveY = 0;
 
-        if (Input.GetKey(KeyCode.W) && isCanMoveInput) HandleDirectionMove(path.Top);
-        else if (Input.GetKey(KeyCode.A) && isCanMoveInput) HandleDirectionMove(path.Left);
-        else if (Input.GetKey(KeyCode.S) && isCanMoveInput) HandleDirectionMove(path.Down);
-        else if (Input.GetKey(KeyCode.D) && isCanMoveInput) HandleDirectionMove(path.Right);
-
-        bool isNotMove = !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D);
-        if (isNotMove && !isMove) animator.CallTriggerIdle();
-
-        if (isRunning)
+        if (isCanMoveInput)
         {
-            if (PlayerStat.Instance && PlayerStat.Instance.stamina <= 0) return;
-            PlayerStat.Instance.stamina -= Time.deltaTime * 14f;
-            PlayerStat.Instance.UpdateStaminaUI();
-        }
-        else
-        {
-            if (PlayerStat.Instance && PlayerStat.Instance.stamina >= 100) return;
-            // regen
-            PlayerStat.Instance.stamina += Time.deltaTime * 10f;
-            PlayerStat.Instance.UpdateStaminaUI();
+            if (Input.GetKey(KeyCode.W)) moveY = 1;
+            else if (Input.GetKey(KeyCode.S)) moveY = -1;
+            if (Input.GetKey(KeyCode.D)) moveX = 1;
+            else if (Input.GetKey(KeyCode.A)) moveX = -1;
         }
 
-        // Debug.Log($"{PlayerStat.Instance.stamina} | {isRunning}");
+        moveInput = new Vector2(moveX, moveY).normalized;
 
-    }
-
-    void HandleDirectionMove(path pathDirection)
-    {
-        if (!isCanMoveInput) return;
-        Vector3 direction = Vector3.zero;
-
-        switch (pathDirection)
+        // Update animasi arah
+        if (moveInput != Vector2.zero)
         {
-            case path.Top:
-                direction = Vector3.up;
-                animator.UpdateDirectionPlayer(PlayerAnimationController.DirectionFace.top);
-                animator.SetNewAnimation(PlayerAnimationController.AnimationStat.walk_top);
-                break;
-            case path.Down:
-                direction = Vector3.down;
-                animator.UpdateDirectionPlayer(PlayerAnimationController.DirectionFace.bottom);
-                animator.SetNewAnimation(PlayerAnimationController.AnimationStat.walk_bottom);
-                break;
-            case path.Left:
-                direction = Vector3.left;
-                if (!PlayerStat.Instance.spriteRenderer.flipX) PlayerStat.Instance.spriteRenderer.flipX = true;
-
-                animator.UpdateDirectionPlayer(PlayerAnimationController.DirectionFace.horizontal);
-                animator.SetNewAnimation(PlayerAnimationController.AnimationStat.walk_horizontal);
-                break;
-            case path.Right:
-                direction = Vector3.right;
-                if (PlayerStat.Instance.spriteRenderer.flipX) PlayerStat.Instance.spriteRenderer.flipX = false;
-
-                animator.UpdateDirectionPlayer(PlayerAnimationController.DirectionFace.horizontal);
-                animator.SetNewAnimation(PlayerAnimationController.AnimationStat.walk_horizontal);
-                break;
-        }
-
-        // 🔍 cek dengan raycast
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, rayDistance, collisionMaskObstacle);
-
-        if (hit.collider == null) // tidak ada halangan
-        {
-            float speed = 1f;
+            UpdateDirection(moveInput);
             isMove = true;
-
-            isCanMoveInput = false;
-            Vector3 targetPos = transform.position + direction * speed;
-
-            transform.DOMove(targetPos, isRunning ? speedCharacterMoveTransition - runningSpeedTransition : speedCharacterMoveTransition)
-                     .OnComplete(() =>
-                     {
-                         isCanMoveInput = true;
-                         isMove = false;
-                     });
         }
         else
         {
-
-            Debug.Log("Nabrak: " + hit.collider.name);
+            if (isMove) animator.CallTriggerIdle();
+            isMove = false;
         }
 
-        CheckItemOnGround(pathDirection);
+        // Stamina logic
+        if (PlayerStat.Instance)
+        {
+            if (isRunning)
+            {
+                if (PlayerStat.Instance.stamina <= 0) isRunning = false;
+                else
+                {
+                    PlayerStat.Instance.stamina -= Time.deltaTime * 14f;
+                    PlayerStat.Instance.UpdateStaminaUI();
+                }
+            }
+            else
+            {
+                PlayerStat.Instance.stamina += Time.deltaTime * 10f;
+                PlayerStat.Instance.UpdateStaminaUI();
+            }
+        }
+
+        // Cek item di depan
+        if (moveInput != Vector2.zero)
+            CheckItemOnGround(moveInput);
     }
 
-    void CheckItemOnGround(path pathDirection)
+    void FixedUpdate()
+    {
+        if (isKnocked) return;
+
+        // Cegah nabrak dengan raycast
+        if (moveInput != Vector2.zero)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, moveInput, rayDistance, collisionMaskObstacle);
+            if (hit.collider != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                return;
+            }
+        }
+
+        // Tentukan kecepatan
+        float currentSpeed = isRunning ? runSpeed : walkSpeed;
+        rb.linearVelocity = moveInput * currentSpeed;
+    }
+
+    public void UpdateDirection(Vector2 dir)
+    {
+        if (dir.y > 0) // top
+        {
+            animator.UpdateDirectionPlayer(PlayerAnimationController.DirectionFace.top);
+            animator.SetNewAnimation(PlayerAnimationController.AnimationStat.walk_top);
+        }
+        else if (dir.y < 0) // down
+        {
+            animator.UpdateDirectionPlayer(PlayerAnimationController.DirectionFace.bottom);
+            animator.SetNewAnimation(PlayerAnimationController.AnimationStat.walk_bottom);
+        }
+        else if (dir.x != 0)
+        {
+            animator.UpdateDirectionPlayer(PlayerAnimationController.DirectionFace.horizontal);
+            animator.SetNewAnimation(PlayerAnimationController.AnimationStat.walk_horizontal);
+
+            // flipX
+            PlayerStat.Instance.spriteRenderer.flipX = dir.x < 0;
+        }
+    }
+
+    void CheckItemOnGround(Vector2 dir)
     {
         CollectSystem.Instance.itemInDistance = null;
-        Vector3 direction = Vector3.zero;
-
-        switch (pathDirection)
-        {
-            case path.Top: direction = Vector3.up; break;
-            case path.Down: direction = Vector3.down; break;
-            case path.Left: direction = Vector3.left; break;
-            case path.Right: direction = Vector3.right; break;
-        }
-
-        CollectSystem.Instance.ItemScanFrontOfPlayer(direction, rayDistance);
+        CollectSystem.Instance.ItemScanFrontOfPlayer(dir, rayDistance);
     }
 
     public void Knockback(Vector2 fromPosition, float knockbackForce, float knockbackDuration)
@@ -137,8 +140,6 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 direction = (rb.position - fromPosition).normalized;
         rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
-
-        // StartCoroutine(EffectSpriteHit());
         StartCoroutine(StopKnockback(knockbackDuration));
     }
 
@@ -146,12 +147,9 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(knockbackDuration);
         rb.linearVelocity = Vector2.zero;
-        // PlayerMovement.Instance.isCanMoveInput = true;
         isKnocked = false;
     }
 
-
-    // Biar kelihatan garis ray di Scene View
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

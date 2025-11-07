@@ -13,9 +13,6 @@ public class CutScene001 : MonoBehaviour
     public AudioSource audioSource;
     public List<AudioClip> audioClips;
     // sound indx : clock, alarm
-
-
-
     void Start()
     {
         StartCoroutine(Show());
@@ -38,7 +35,6 @@ public class CutScene001 : MonoBehaviour
             if (CG_textClock.alpha == 0) CG_textClock.alpha = 1f;
             else CG_textClock.alpha = 0f;
         }
-
 
         CG_bg.alpha = 0;
         CG_textClock.alpha = 1f;

@@ -31,11 +31,20 @@ public class DialogManager : MonoBehaviour
     [SerializeField] AudioSource audioAmbientSource;
 
     [Header("===Event===")]
-    [SerializeField] UnityEvent AfterFinishDialog;
+    public UnityEvent AfterFinishDialog;
+
+
+    // singletoon
+    public static DialogManager Instance;
+
+    void Start()
+    {
+        Instance = this;
+    }
 
     void Update()
     {
-        if (!isDialog || !isCanClickNextDialog) return; 
+        if (!isDialog || !isCanClickNextDialog) return;
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -113,7 +122,7 @@ public class DialogManager : MonoBehaviour
     /// <returns></returns>
     List<string> getTextByLanguage(string getLanguage, DialogSO dialog)
     {
-        List<string> textList = new List<string> {};
+        List<string> textList = new List<string> { };
 
         if (getLanguage == "ID")
         {
@@ -249,6 +258,12 @@ public class DialogManager : MonoBehaviour
         if (type == DialogSO.TypeDialogs.World) canvasGroupWorldDialog.DOFade(1f, 0.2f);
 
         if (type == DialogSO.TypeDialogs.Character) canvasGroupCharacterDialog.DOFade(1f, 0.2f);
+    }
+
+    public void HideDialog()
+    {
+        canvasGroupWorldDialog.DOFade(0, 0.4f);
+        canvasGroupCharacterDialog.DOFade(0, 0.4f);
     }
 
     /// <summary>
