@@ -7,12 +7,11 @@ public class EnemyCollision : MonoBehaviour
     Rigidbody2D rb;
     bool isKnocked = false, isBlink;
     private Material mat;
-    SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer spriteRenderer;
 
 
     void Start()
     {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         mat = spriteRenderer.material;
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -37,7 +36,7 @@ public class EnemyCollision : MonoBehaviour
 
         }
 
-        mat.SetVector("_ColorTint", new Vector4(-1, -2, -1, 0));
+        mat.SetVector("_ColorTint", new Vector4(-1, -1, -1, 0));
         EnemyMovement.Instance.isCanMove = false;
         yield return new WaitForSeconds(1.1f);
         EnemyMovement.Instance.isCanMove = true;
@@ -70,6 +69,11 @@ public class EnemyCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("rockThrow") && collision.gameObject.GetComponent<RockScript>().isThrow)
         {
             Debug.LogWarning("You hit the boss");
+            EnemyStat.Instance.health--;
+            BossUIHUD.Instance.UpdateFillHealth();
+
+            BossUIHUD.Instance.UpdateTextDialog(EnemyStat.Instance.EnemyWords[Random.Range(0, EnemyStat.Instance.EnemyWords.Count)], Random.Range(1f, 4f));
+
             Knockback(collision.gameObject.transform.position, collision.gameObject.GetComponent<RockScript>().knockForce, 0.4f);
             CameraFollow.Instance.transform.DOShakePosition(0.2f, 0.3f, 10, 90, false);
         }

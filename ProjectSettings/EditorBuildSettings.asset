@@ -42,6 +42,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene01.unity
     guid: 7fdadc473c22fd940b2d97499bed3dad
   - enabled: 1
+    path: Assets/scene004.unity
+    guid: cb502604c33a4eb4280fd4443781cce5
+  - enabled: 1
+    path: Assets/Scenes/Scene_05.unity
+    guid: e06ae4e9dcd720741a1691b9c2aa34bf
+  - enabled: 1
     path: Assets/QuestManager.unity
     guid: d5c4e6a63dd3cb944bd8007956282c16
   - enabled: 1
@@ -50,6 +56,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cutscene_002.unity
     guid: 429ea760619e3e14bbc268206147fc2d
+  - enabled: 1
+    path: Assets/Scenes/Scene_02.unity
+    guid: 50ac95a910a539844bc218beb24d66c4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

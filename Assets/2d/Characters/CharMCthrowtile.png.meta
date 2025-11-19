@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: f63231a7d55d37b4c9c4206329715b8d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3113979976193197153
+    second: CharMCthrowtile_0
+  - first:
+      213: -7510366760718114126
+    second: CharMCthrowtile_1
+  - first:
+      213: -3335194469561214230
+    second: CharMCthrowtile_2
+  - first:
+      213: 3527366216829784046
+    second: CharMCthrowtile_3
+  - first:
+      213: -5345399466768109924
+    second: CharMCthrowtile_4
+  - first:
+      213: -6788221185150796228
+    second: CharMCthrowtile_5
+  - first:
+      213: 3469826663544387599
+    second: CharMCthrowtile_6
+  - first:
+      213: 6805127003628179640
+    second: CharMCthrowtile_7
+  - first:
+      213: -8092933383176868291
+    second: CharMCthrowtile_8
+  - first:
+      213: 8883116077093563874
+    second: CharMCthrowtile_9
+  - first:
+      213: 2085349611822467369
+    second: CharMCthrowtile_10
+  - first:
+      213: 7197707533224089533
+    second: CharMCthrowtile_11
+  - first:
+      213: -2239413974614292927
+    second: CharMCthrowtile_12
+  - first:
+      213: -6295241851234817888
+    second: CharMCthrowtile_13
+  - first:
+      213: 7503119749385818148
+    second: CharMCthrowtile_14
+  - first:
+      213: -2489477555102970718
+    second: CharMCthrowtile_15
+  - first:
+      213: 4660721638745547590
+    second: CharMCthrowtile_16
+  - first:
+      213: 1867750951674025696
+    second: CharMCthrowtile_17
+  - first:
+      213: -1053651051066743591
+    second: CharMCthrowtile_18
+  - first:
+      213: 153743266247769881
+    second: CharMCthrowtile_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CharMCthrowtile_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 116
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b3351d5bbe8c4d0800000000000000
+      internalID: -3113979976193197153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 116
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b2ee760931d5c790800000000000000
+      internalID: -7510366760718114126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 116
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aead4f0fc4207b1d0800000000000000
+      internalID: -3335194469561214230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_3
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 78
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef4adaa2e8b3f030800000000000000
+      internalID: 3527366216829784046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_4
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 116
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9e69b0918351d5b0800000000000000
+      internalID: -5345399466768109924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_5
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 78
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3e3e423cc46bc1a0800000000000000
+      internalID: -6788221185150796228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_6
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 116
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f08fdb077fc472030800000000000000
+      internalID: 3469826663544387599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_7
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 78
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b01da664faa07e50800000000000000
+      internalID: 6805127003628179640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_8
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 78
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3ea7d857ff10bf80800000000000000
+      internalID: -8092933383176868291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 39
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed29b1e10b274b70800000000000000
+      internalID: 8883116077093563874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_10
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 39
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9294d2d5c66a0fc10800000000000000
+      internalID: 2085349611822467369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_11
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 78
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db799facdd463e360800000000000000
+      internalID: 7197707533224089533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 40
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146c112ead00ce0e0800000000000000
+      internalID: -2239413974614292927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_13
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a8e9f1d3eec2a8a0800000000000000
+      internalID: -6295241851234817888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_14
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4201c59a8af602860800000000000000
+      internalID: 7503119749385818148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_15
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac87cb7a59937dd0800000000000000
+      internalID: -2489477555102970718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_16
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 40
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 643a76a03a53ea040800000000000000
+      internalID: 4660721638745547590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_17
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 2
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e69d6348959be910800000000000000
+      internalID: 1867750951674025696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_18
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 2
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d423f793fda061f0800000000000000
+      internalID: -1053651051066743591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMCthrowtile_19
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 2
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f7e43afa4322200800000000000000
+      internalID: 153743266247769881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CharMCthrowtile_0: -3113979976193197153
+      CharMCthrowtile_1: -7510366760718114126
+      CharMCthrowtile_10: 2085349611822467369
+      CharMCthrowtile_11: 7197707533224089533
+      CharMCthrowtile_12: -2239413974614292927
+      CharMCthrowtile_13: -6295241851234817888
+      CharMCthrowtile_14: 7503119749385818148
+      CharMCthrowtile_15: -2489477555102970718
+      CharMCthrowtile_16: 4660721638745547590
+      CharMCthrowtile_17: 1867750951674025696
+      CharMCthrowtile_18: -1053651051066743591
+      CharMCthrowtile_19: 153743266247769881
+      CharMCthrowtile_2: -3335194469561214230
+      CharMCthrowtile_3: 3527366216829784046
+      CharMCthrowtile_4: -5345399466768109924
+      CharMCthrowtile_5: -6788221185150796228
+      CharMCthrowtile_6: 3469826663544387599
+      CharMCthrowtile_7: 6805127003628179640
+      CharMCthrowtile_8: -8092933383176868291
+      CharMCthrowtile_9: 8883116077093563874
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

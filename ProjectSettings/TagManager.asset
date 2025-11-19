@@ -16,7 +16,7 @@ TagManager:
   - ItemCollect
   - MinimapLayer
   - Character
-  - 
+  - rock
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: floor
     uniqueID: 1199814413
+    locked: 0
+  - name: rock
+    uniqueID: 578008067
     locked: 0
   - name: Default
     uniqueID: 0

@@ -79,11 +79,13 @@ public class PlayerStat : MonoBehaviour
 
     public void UpdateStaminaUI()
     {
-        float maxWidth = 197f;
-        float normalizedStamina = stamina / maxStamina;
-        float newWidth = maxWidth * normalizedStamina;
-
-        HUDManager.Instance.RT_staminaBar.sizeDelta = new Vector2(newWidth, HUDManager.Instance.RT_staminaBar.sizeDelta.y);
+        // float maxWidth = 197f;
+        // float normalizedStamina = stamina / maxStamina;
+        // float newWidth = maxWidth * normalizedStamina;
+        float newAmout = stamina / maxStamina;
+        Debug.Log(newAmout);
+        HUDManager.Instance.imageStaminaBarFill.fillAmount = newAmout; 
+        // HUDManager.Instance.RT_staminaBar.sizeDelta = new Vector2(newWidth, HUDManager.Instance.RT_staminaBar.sizeDelta.y);
     }
 
 }

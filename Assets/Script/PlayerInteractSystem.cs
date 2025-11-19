@@ -41,7 +41,15 @@ public class PlayerInteractSystem : MonoBehaviour
         }
     }
 
-    void TryInteract()
+    void TryInteract() // e
+    {
+
+        if (interactable == null) return;
+        Debug.Log($"Try interact {interactable.GetInteractText()}");
+        interactable.Interact();
+    }
+
+     void TryInteract2() // r
     {
 
         if (interactable == null) return;

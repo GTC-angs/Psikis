@@ -17,9 +17,6 @@ public class Scene01Manager : MonoBehaviour
     // door_km, door, cabinet
     public List<DoorWithInt> InteractionScripts;
 
-    // list quest
-    public List<QuestSO> questSOs;
-
     // dialogs
     public List<DialogSO> dialogs1;
 
@@ -65,7 +62,6 @@ public class Scene01Manager : MonoBehaviour
 
 
         yield return new WaitForSeconds(4f);
-        QuestManager.Instance.AddQuestToActive(questSOs[0]);
         TutorialUIMove.SetActive(false);
         TutorialUIInteract.SetActive(true);
     }
@@ -77,8 +73,6 @@ public class Scene01Manager : MonoBehaviour
 
     IEnumerator StopAlarmCoroutine(AudioSource audioSource)
     {
-        QuestManager.Instance.UpdateQuest("Turn off alarm", 1);
-        QuestManager.Instance.HideQuest();
         audioSource.Stop();
         // PlayerMovement.Instance.UpdateDirection(new Vector2(0, -1));
         PlayerAnimationController.Instance.animator.Play("idle_bottom");
@@ -107,7 +101,6 @@ public class Scene01Manager : MonoBehaviour
     void AfterDialog1()
     {
         Debug.Log("OK AMAN");
-        QuestManager.Instance.AddQuestToActive(questSOs[1]);
         PlayerMovement.Instance.isCanMoveInput = true;
         DialogManager.Instance.HideDialog();
 
@@ -119,6 +112,7 @@ public class Scene01Manager : MonoBehaviour
     public void OpenDoorKM() // cutscene 2
     {
         SceneManager.LoadSceneAsync("Cutscene_002", LoadSceneMode.Additive);
+        AfterOpenDoorKM();
     }
 
     public void AfterOpenDoorKM()
@@ -138,7 +132,8 @@ public class Scene01Manager : MonoBehaviour
         PlayerMovement.Instance.isCanMoveInput = false;
         light2D.intensity = 0f;
         float time = 0;
-        while (time > 2f)
+
+        while (time < 2f)
         {
             time += Time.deltaTime;
         }
@@ -158,12 +153,14 @@ public class Scene01Manager : MonoBehaviour
     public void OpenDoorOut()
     {
         // set new transform player
-        
-    }
 
-    public void AfterInteractDoorOut()
-    {
+        InteractionScripts[0].isCanInteract = false; // door keluar
+        InteractionScripts[1].isCanInteract = false; // door km
+        InteractionScripts[2].isCanInteract = false; // cabinet
 
+        DOTween.To(() => light2D.intensity, (val) => light2D.intensity = val, 0, 1.5f);
+
+        SceneManager.LoadScene("Scene_02");
     }
 
 

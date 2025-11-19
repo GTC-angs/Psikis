@@ -37,14 +37,28 @@ public class DialogManager : MonoBehaviour
     // singletoon
     public static DialogManager Instance;
 
+    // 
+    public bool isTyping = false;
+    public bool skipTyping = false;
+
     void Start()
     {
         Instance = this;
     }
 
+    void Changepitch()
+    {
+        audioSource.pitch = Random.Range(0.95f, 1.05f);
+    }
+
     void Update()
     {
         if (!isDialog || !isCanClickNextDialog) return;
+
+        if (isTyping && Input.GetMouseButtonDown(0))
+        {
+            skipTyping = true;
+        }
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -73,6 +87,7 @@ public class DialogManager : MonoBehaviour
     /// </summary>
     public void StartDialog()
     {
+        Debug.Log("Play");
         PlayDialog();
         isDialog = true;
         isCanClickNextDialog = true;
@@ -325,19 +340,44 @@ public class DialogManager : MonoBehaviour
     /// <returns></returns>
     IEnumerator TypingEffect(string textDialog, TMP_Text textUI, float waitSecond = 0.05f)
     {
+        isTyping = true;
+        isCanClickNextDialog = false;
 
         foreach (char karakter in textDialog)
         {
+            // Jika player klik untuk skip
+            if (skipTyping)
+            {
+                textUI.text = textDialog;
+                break;
+            }
+
+            // Tambahkan huruf
             textUI.text += karakter;
-            yield return new WaitForSeconds(waitSecond);
+
+            // --- Play Typing SFX ---
+            if (audioSource)
+            {
+                Changepitch();
+            }
+
+            // --- Natural Pause ---
+            if (karakter == ',' || karakter == ';')
+                yield return new WaitForSeconds(waitSecond * 3);
+            else if (karakter == '.' || karakter == '!' || karakter == '?')
+                yield return new WaitForSeconds(waitSecond * 5);
+            else
+                yield return new WaitForSeconds(waitSecond);
         }
 
-        // stopp typing sound
         audioSource.Stop();
 
-        // tambahkan index box
+        isTyping = false;
+        skipTyping = false;
+
+        // Izinkan lanjut ke dialog berikutnya
+        isCanClickNextDialog = true;
         indexBoxDialog++;
-        isCanClickNextDialog = true; // set true agar player bisa klik dan lanjut dialog
     }
 
 }

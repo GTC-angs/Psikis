@@ -27,6 +27,7 @@ public class HUDManager : MonoBehaviour
     [Header("==UI Bottom==")]
     [Space(10)]
     public RectTransform RT_staminaBar;
+    public Image imageStaminaBarFill;
     public List<CanvasGroup> CG_heartsIcon;
 
 

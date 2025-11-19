@@ -80,6 +80,8 @@ public class EnemyAttack : MonoBehaviour
     IEnumerator HandleChargeAttack()
     {
         EnemyMovement.Instance.isCanMove = false;
+        // play animation
+        EnemyAnimator.Instance.PlayAnimation(EnemyAnimator.AnimState.attack);
 
         // update arah cone agar sesuai arah musuh
         if (attackVisual != null)
@@ -115,7 +117,8 @@ public class EnemyAttack : MonoBehaviour
         isAttacking = false;
 
         ChangeState(EnemyState.Walk);
-
+        EnemyAnimator.Instance.PlayAnimation(EnemyAnimator.AnimState.idle);
+        
         chargeRoutine = null; // say its over
 
     }

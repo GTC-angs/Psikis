@@ -45,4 +45,10 @@ public class AlarmWithI : MonoBehaviour, IInteractable
         Debug.Log("You turn off th alarm");
 
     }
+
+     public void Interact2()
+    {
+       // nothing
+
+    }
 }

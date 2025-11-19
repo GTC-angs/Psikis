@@ -1,7 +1,5 @@
 using UnityEngine;
-using DG;
 using DG.Tweening;
-using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System;
@@ -12,12 +10,32 @@ public class HomeSceneManager : MonoBehaviour
 {
     public CanvasGroup CG_bg;
     [SerializeField] RectTransform circelRect;
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource audioSource, audioSourceHover, audioSourceClick;
+    public static HomeSceneManager Instance;
 
     void Start()
     {
+        Instance = this;
         circelRect.DOScale(new Vector3(50, 50, 50), 0.01f);
         circelRect.DOScale(new Vector3(1, 1, 1), 2f);
+    }
+
+    public void PlayHoverSfx()
+    {
+        audioSourceHover.volume = 1f;
+        audioSourceHover.loop = false;
+        audioSourceHover.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
+        audioSourceHover.Stop();
+        audioSourceHover.Play();
+    }
+
+    public void PlayClickSfx()
+    {
+        audioSourceClick.volume = 1f;
+        audioSourceClick.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
+        audioSourceClick.loop = false;
+        audioSourceClick.Stop();
+        audioSourceClick.Play();
     }
 
     public IEnumerator StartCrossFadingON(Action callb)
@@ -40,6 +58,7 @@ public class HomeSceneManager : MonoBehaviour
     // Handle UI Click
     public void NewGame()
     {
+        PlayClickSfx();
         StartCoroutine(NewGameCoroutine());
     }
 
@@ -47,7 +66,7 @@ public class HomeSceneManager : MonoBehaviour
     {
         ScaleCircle(1f);
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Cutscene001");
+        SceneManager.LoadScene("Scene01");
     }
     void ScaleCircle(float duration)
     {
@@ -61,26 +80,31 @@ public class HomeSceneManager : MonoBehaviour
 
     public void Quit()
     {
+        PlayClickSfx();
         Application.Quit();
     }
 
     public void Option()
     {
+        PlayClickSfx();
         SceneManager.LoadScene("OptionsUI", LoadSceneMode.Additive);
     }
 
     public void ShowLoadGame()
     {
+        PlayClickSfx();
         SceneManager.LoadScene("SaveUI", LoadSceneMode.Additive);
     }
 
     public void HideLoadGame()
     {
+        PlayClickSfx();
         SceneManager.UnloadSceneAsync("SaveUI");
     }
 
     public void Credit()
     {
+        PlayClickSfx();
         StartCoroutine(CreditCoroutine());
     }
 

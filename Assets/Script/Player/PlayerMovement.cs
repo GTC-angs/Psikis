@@ -69,14 +69,18 @@ public class PlayerMovement : MonoBehaviour
                 if (PlayerStat.Instance.stamina <= 0) isRunning = false;
                 else
                 {
-                    PlayerStat.Instance.stamina -= Time.deltaTime * 14f;
+                    PlayerStat.Instance.stamina -= Time.deltaTime * 30f;
                     PlayerStat.Instance.UpdateStaminaUI();
                 }
             }
             else
             {
-                PlayerStat.Instance.stamina += Time.deltaTime * 10f;
-                PlayerStat.Instance.UpdateStaminaUI();
+                if (PlayerStat.Instance.stamina <= PlayerStat.Instance.maxStamina)
+                {
+                    PlayerStat.Instance.stamina += Time.deltaTime * 10f;
+                    PlayerStat.Instance.UpdateStaminaUI();
+                }
+
             }
         }
 

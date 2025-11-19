@@ -510,6 +510,7 @@ GameObject:
   - component: {fileID: 156577894}
   - component: {fileID: 156577893}
   - component: {fileID: 156577895}
+  - component: {fileID: 156577896}
   m_Layer: 0
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -651,7 +652,38 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4281325311
   hoverDuration: 0.6
+  xTransformHover: 10
   locationNormal: {x: 425, y: -691, z: 0}
+  changeColorWhileHover: 1
+--- !u!114 &156577896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156577891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1969877805}
+          m_TargetAssemblyTypeName: OptionUIManager, Assembly-CSharp
+          m_MethodName: CloseSettingScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &184158072
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,8 +874,9 @@ GameObject:
   - component: {fileID: 190580353}
   - component: {fileID: 190580355}
   - component: {fileID: 190580356}
+  - component: {fileID: 190580357}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,7 +898,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -25}
+  m_AnchoredPosition: {x: 175, y: -91.87155}
   m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &190580353
@@ -996,7 +1029,38 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4281325311
   hoverDuration: 0.6
+  xTransformHover: 10
   locationNormal: {x: 175, y: -25, z: 0}
+  changeColorWhileHover: 0
+--- !u!114 &190580357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190580351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1969877805}
+          m_TargetAssemblyTypeName: OptionUIManager, Assembly-CSharp
+          m_MethodName: OpenAudioMenu
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &235944879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,7 +2278,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656797154}
   m_Enabled: 1
-  m_Alpha: 0.97
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -2617,8 +2681,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 190580352}
   - {fileID: 1683697183}
+  - {fileID: 190580352}
   m_Father: {fileID: 100581029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -4830,8 +4894,9 @@ GameObject:
   - component: {fileID: 1683697185}
   - component: {fileID: 1683697184}
   - component: {fileID: 1683697186}
+  - component: {fileID: 1683697187}
   m_Layer: 0
-  m_Name: Text (TMP) (3)
+  m_Name: Basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4853,7 +4918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -91.87155}
+  m_AnchoredPosition: {x: 175, y: -25}
   m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1683697184
@@ -4885,8 +4950,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281325311
+  m_fontColor: {r: 1, g: 0.8392157, b: 0.18431373, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4971,7 +5036,38 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4281325311
   hoverDuration: 0.6
+  xTransformHover: 10
   locationNormal: {x: 175, y: -91.87155, z: 0}
+  changeColorWhileHover: 0
+--- !u!114 &1683697187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683697182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1969877805}
+          m_TargetAssemblyTypeName: OptionUIManager, Assembly-CSharp
+          m_MethodName: OpenControlMenu
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1686117971
 GameObject:
   m_ObjectHideFlags: 0
@@ -5339,7 +5435,7 @@ GameObject:
   - component: {fileID: 1789711062}
   - component: {fileID: 1789711061}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Option
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5576,8 +5672,9 @@ GameObject:
   - component: {fileID: 1969877806}
   - component: {fileID: 1969877805}
   - component: {fileID: 1969877804}
+  - component: {fileID: 1969877807}
   m_Layer: 0
-  m_Name: OptionUIManager
+  m_Name: Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5614,7 +5711,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroupAudio: {fileID: 1243893055}
-  canvasGroupBg: {fileID: 656797158}
+  canvasGroupBg: {fileID: 299395549}
+  basicText: {fileID: 1683697184}
+  audioText: {fileID: 190580353}
+  activeTabColor: {r: 1, g: 0.8392157, b: 0.18431373, a: 1}
+  inactiveTabColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1969877806
 Transform:
   m_ObjectHideFlags: 0
@@ -5630,6 +5731,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1969877807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969877803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08dc46c79a868e4492d76281a8a57ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 1999084240}
+  toggle: {fileID: 472917509}
 --- !u!1 &1999084238
 GameObject:
   m_ObjectHideFlags: 0
