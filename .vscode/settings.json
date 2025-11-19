@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "Sikolog.sln"
+    "dotnet.defaultSolution": "Psikis.sln"
 }
