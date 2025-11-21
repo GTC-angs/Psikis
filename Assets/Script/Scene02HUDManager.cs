@@ -30,6 +30,7 @@ public class Scene02HUDManager : MonoBehaviour
 
     public void Showpasient_UI()
     {
+        PlayerInteractSystem.Instance.HideInteractUI();
         AnimCanvas.Play("Canvas_pasien_in", 0, 0);
     }
 
@@ -43,6 +44,9 @@ public class Scene02HUDManager : MonoBehaviour
     {
         // load cutscene kan
         Hidepasient_UI();
-        SceneManager.LoadSceneAsync("Cutscene_003");
+        SceneManager.LoadSceneAsync("Cutscene_003", LoadSceneMode.Additive);
+        StartCoroutine(Scene02Manager.Instance.PrepareForDialog());
     }
+
+
 }

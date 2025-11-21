@@ -120,8 +120,8 @@ public class Scene01Manager : MonoBehaviour
         Debug.Log("DONE OK AMAN");
         // set animation to to
         PlayerAnimationController.Instance.animator.Play("idle_bottom");
-        InteractionScripts[0].isCanInteract = false; // door keluar
-        InteractionScripts[1].isCanInteract = false; // door km
+        InteractionScripts[0].isCanInteract = true; // door keluar
+        InteractionScripts[1].isCanInteract = true; // door km
         InteractionScripts[2].isCanInteract = true; // cabinet
 
     }

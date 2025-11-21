@@ -11,6 +11,7 @@ public class RawImageHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     Color defaultColor;
     [SerializeField] Color hoverColor;
     [SerializeField] UnityEvent OnClicked;
+    [SerializeField] UnityEvent OnHover;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class RawImageHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     void StartHover()
     {
+        OnHover?.Invoke();
         rawImage.color = defaultColor;
         rawImage.DOColor(hoverColor, 0.3f);
         rectTransform.DORotate(new Vector3(0, 0, 5), 0.2f);

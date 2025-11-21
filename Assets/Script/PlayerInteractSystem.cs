@@ -34,6 +34,11 @@ public class PlayerInteractSystem : MonoBehaviour
             TryInteract();
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            TryInteract2();
+        }
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if (interactable == null) return;
@@ -49,12 +54,12 @@ public class PlayerInteractSystem : MonoBehaviour
         interactable.Interact();
     }
 
-     void TryInteract2() // r
+    void TryInteract2() // r
     {
 
         if (interactable == null) return;
         Debug.Log($"Try interact {interactable.GetInteractText()}");
-        interactable.Interact();
+        interactable.Interact2();
     }
 
     public void ShowInteractUI(int count, List<string> listActionText)
@@ -110,5 +115,7 @@ public class PlayerInteractSystem : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         if (nameGO == other.gameObject.name) interactable = null;
+        HideInteractUI();
+        PlayerMovement.Instance.isCanMoveInput = true;
     }
 }
