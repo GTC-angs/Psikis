@@ -21,9 +21,12 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 moveInput;
 
-    void Start()
+    void Awake()
     {
         Instance = this;
+    }
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<PlayerAnimationController>();
         characterAudio = gameObject.GetComponent<CharacterAudio>();

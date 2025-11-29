@@ -45,6 +45,10 @@ public class Scene01Manager : MonoBehaviour
     IEnumerator PrePlay()
     {
         light2D.intensity = 0.2f;
+        if(PlayerMovement.Instance == null)
+        {
+            yield return null;
+        }
         PlayerMovement.Instance.isCanMoveInput = false;
         yield return new WaitForSeconds(11f);
         // cutscene ended
