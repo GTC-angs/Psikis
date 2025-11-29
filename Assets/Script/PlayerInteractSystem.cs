@@ -21,9 +21,11 @@ public class PlayerInteractSystem : MonoBehaviour
 
     // singletoon
     public static PlayerInteractSystem Instance;
+    CharacterAudio characterAudio;
 
     void Start()
-    {
+    {   
+        characterAudio = gameObject.GetComponent<CharacterAudio>();
         Instance = this;
     }
 
@@ -52,6 +54,7 @@ public class PlayerInteractSystem : MonoBehaviour
         if (interactable == null) return;
         Debug.Log($"Try interact {interactable.GetInteractText()}");
         interactable.Interact();
+        characterAudio.PlaySelectSound();
     }
 
     void TryInteract2() // r
@@ -60,10 +63,12 @@ public class PlayerInteractSystem : MonoBehaviour
         if (interactable == null) return;
         Debug.Log($"Try interact {interactable.GetInteractText()}");
         interactable.Interact2();
+        characterAudio.PlaySelectSound();
     }
 
     public void ShowInteractUI(int count, List<string> listActionText)
     {
+        characterAudio.PlayInteractSound();
         actionStringList = listActionText;
 
         for (int i = 0; i < interactUIList.Count; i++)

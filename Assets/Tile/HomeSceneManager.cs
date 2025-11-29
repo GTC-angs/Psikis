@@ -112,6 +112,6 @@ public class HomeSceneManager : MonoBehaviour
     {
         ScaleCircle(1f);
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("CreditUI", LoadSceneMode.Additive);
+        SceneManager.LoadScene("CreditUI");
     }
 }

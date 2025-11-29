@@ -47,6 +47,10 @@ public class EnemyAttack : MonoBehaviour
     {
         float distance = Vector2.Distance(transform.position, EnemyMovement.Instance.targetPosition);
 
+        UpdateUI();
+
+        if(!EnemyStat.Instance.isAlive) return;
+        
         switch (currentState)
         {
             case EnemyState.Idle:
@@ -70,7 +74,6 @@ public class EnemyAttack : MonoBehaviour
 
         }
 
-        UpdateUI();
     }
 
     void ChangeState(EnemyState newState)
@@ -82,7 +85,6 @@ public class EnemyAttack : MonoBehaviour
         EnemyMovement.Instance.isCanMove = false;
         // play animation
         EnemyAnimator.Instance.PlayAnimation(EnemyAnimator.AnimState.attack);
-
         // update arah cone agar sesuai arah musuh
         if (attackVisual != null)
         {
@@ -95,8 +97,15 @@ public class EnemyAttack : MonoBehaviour
 
         float t = 0;
         Debug.Log("Charging..");
+        bool isHitSoundPlayed = false;
         while (t < chargeDuration)
         {
+            if(t> 0.8f && !isHitSoundPlayed)
+            {
+                EnemyAudio.Instance.PlaySlashSound();
+                isHitSoundPlayed = true;
+            }
+
             t += Time.deltaTime;
             yield return null;
         }

@@ -54,6 +54,7 @@ public class Scene01Manager : MonoBehaviour
 
         PlayerMovement.Instance.transform.position = targetPlayerWakeUp;
         PlayerMovement.Instance.transform.rotation = targetPlayerWakeUpRotation;
+        envAudioSource[1].Play();
 
         lemari.color = new Color32(255, 255, 255, 255);
 
@@ -111,6 +112,7 @@ public class Scene01Manager : MonoBehaviour
 
     public void OpenDoorKM() // cutscene 2
     {
+        PlayEnvAudio(2);
         SceneManager.LoadSceneAsync("Cutscene_002", LoadSceneMode.Additive);
         AfterOpenDoorKM();
     }
@@ -128,6 +130,7 @@ public class Scene01Manager : MonoBehaviour
 
     public void OpenCabinet()
     {
+        PlayEnvAudio(4);
         Debug.Log("Cabinet interact sucess");
         PlayerMovement.Instance.isCanMoveInput = false;
         light2D.intensity = 0f;
@@ -153,14 +156,20 @@ public class Scene01Manager : MonoBehaviour
     public void OpenDoorOut()
     {
         // set new transform player
-
+        PlayEnvAudio(3);
         InteractionScripts[0].isCanInteract = false; // door keluar
         InteractionScripts[1].isCanInteract = false; // door km
         InteractionScripts[2].isCanInteract = false; // cabinet
 
         DOTween.To(() => light2D.intensity, (val) => light2D.intensity = val, 0, 1.5f);
 
-        SceneManager.LoadScene("Scene_02");
+        SceneManager.LoadScene("Cutscene_mobil");
+    }
+
+    void PlayEnvAudio(int index)
+    {
+        envAudioSource[index].Stop();
+        envAudioSource[index].Play();
     }
 
 

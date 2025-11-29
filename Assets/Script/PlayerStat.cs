@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class PlayerStat : MonoBehaviour
 {
     public int health = 3, maxHealth = 3;
-    public int Health{
+    public int Health
+    {
         get
         {
             return health;
@@ -15,7 +16,7 @@ public class PlayerStat : MonoBehaviour
         {
             health = value;
             UpdateHealthUI();
-            if (health <= 0) Time.timeScale = 0;
+            if (health <= 0) if (Scene05Manager.Instance != null) Scene05Manager.Instance.GameOver();
         }
     }
     public float stamina = 100f, maxStamina = 100f;
@@ -52,7 +53,7 @@ public class PlayerStat : MonoBehaviour
 
         isCanGetHit = false;
 
-        yield return new WaitUntil(() => 
+        yield return new WaitUntil(() =>
         {
 
             time += Time.deltaTime;
@@ -68,13 +69,12 @@ public class PlayerStat : MonoBehaviour
                 spriteRenderer.color = new Color32(255, 255, 255, 255);
                 isBlink = !isBlink;
             }
-            
+
             return false;
         });
 
         spriteRenderer.color = new Color32(255, 255, 255, 255);
-        PlayerStat.Instance.isCanGetHit = true;
-
+        isCanGetHit = true;
     }
 
     public void UpdateStaminaUI()
@@ -84,7 +84,8 @@ public class PlayerStat : MonoBehaviour
         // float newWidth = maxWidth * normalizedStamina;
         float newAmout = stamina / maxStamina;
         Debug.Log(newAmout);
-        HUDManager.Instance.imageStaminaBarFill.fillAmount = newAmout; 
+        if (HUDManager.Instance != null)
+            HUDManager.Instance.imageStaminaBarFill.fillAmount = newAmout;
         // HUDManager.Instance.RT_staminaBar.sizeDelta = new Vector2(newWidth, HUDManager.Instance.RT_staminaBar.sizeDelta.y);
     }
 

@@ -9,7 +9,14 @@ public class ScriptCredit : MonoBehaviour
 
     void Start()
     {
-        circelRect.DOScale(new Vector3(1, 1, 1), 1f);
+        // circelRect.DOScale(new Vector3(1, 1, 1), 1f);
+        StartCoroutine(BackToHomeWithTime());
+    }
+
+    IEnumerator BackToHomeWithTime()
+    {
+        yield return new WaitForSecondsRealtime(48f);
+        SceneManager.LoadScene("Home");
     }
     void Update()
     {
@@ -25,9 +32,8 @@ public class ScriptCredit : MonoBehaviour
 
     IEnumerator BackToHomeCoroutine()
     {
-        circelRect.DOScale(new Vector3(100, 100, 100), 1f);
-        yield return new WaitForSeconds(2f);
-        SceneManager.UnloadSceneAsync("CreditUI");
+        yield return new WaitForSecondsRealtime(0.5f);
+        SceneManager.LoadScene("Home");
     }
 
 }

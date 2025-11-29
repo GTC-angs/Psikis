@@ -593,6 +593,8 @@ PlayableDirector:
     value: {fileID: 1335560009}
   - key: {fileID: 6565324816004515693, guid: c545c616a80be0c4091e87414af879a5, type: 2}
     value: {fileID: 1935966856}
+  - key: {fileID: -472673970102816453, guid: c545c616a80be0c4091e87414af879a5, type: 2}
+    value: {fileID: 1855369514}
   m_ExposedReferences:
     m_References: []
 --- !u!95 &1058722983
@@ -1014,7 +1016,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: scene004
+            m_StringArgument: Cutscene_preheadspace
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &2112001119

@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float rayDistance = 0.5f;
 
     PlayerAnimationController animator;
+    CharacterAudio characterAudio;
     Rigidbody2D rb;
 
     Vector2 moveInput;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         Instance = this;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<PlayerAnimationController>();
+        characterAudio = gameObject.GetComponent<CharacterAudio>();
     }
 
     void Update()
@@ -46,6 +48,9 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.D)) moveX = 1;
             else if (Input.GetKey(KeyCode.A)) moveX = -1;
         }
+
+        // start audio
+        PlayAudioMovementCharacter(moveX, moveY);
 
         moveInput = new Vector2(moveX, moveY).normalized;
 
@@ -107,6 +112,13 @@ public class PlayerMovement : MonoBehaviour
         // Tentukan kecepatan
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
         rb.linearVelocity = moveInput * currentSpeed;
+    }
+
+    void PlayAudioMovementCharacter(float moveX, float moveY)
+    {
+        if (!isRunning && (moveX != 0 || moveY != 0)) characterAudio.Walk();
+        if (isRunning && (moveX != 0 || moveY != 0)) characterAudio.Run();
+        if (moveX == 0 && moveY == 0) characterAudio.Idle();
     }
 
     public void UpdateDirection(Vector2 dir)

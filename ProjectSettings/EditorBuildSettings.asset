@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SplashScreen.unity
     guid: d94dbcfd6ac29114b945eff10768a108
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Script/Experiment/HUD.unity
     guid: ef1280668d47e254dad103c69ae091e1
   - enabled: 1
@@ -65,6 +62,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cutscene_004_tea.unity
     guid: 70a6719c4d1b7bb45a2327eba61599ba
+  - enabled: 1
+    path: Assets/Scenes/Cutscene_mobil.unity
+    guid: de7b2eeb11bf8694d94bf0cc02f68ba0
+  - enabled: 1
+    path: Assets/Scenes/Cutscene_preheadspace.unity
+    guid: b45a360869655814badff63016c38beb
+  - enabled: 1
+    path: Assets/Scenes/Cutscene_heartcombine.unity
+    guid: 2b63f4f6846c0d9478ed4ecc42bf33a3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

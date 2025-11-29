@@ -28,7 +28,7 @@ public class AlarmWithI : MonoBehaviour, IInteractable
     {
         if (isUsed) return;
         // PlayerInteractSystem.Instance.SetActionStringList();
-        PlayerInteractSystem.Instance.ShowInteractUI(2, new List<string>() { "Turn Off (E)", "Cancel (Q)" }); // show 2 options
+        PlayerInteractSystem.Instance.ShowInteractUI(3, new List<string>() { "Alarm", "Turn Off (E)", "Cancel (Q)" }); // show 2 options
 
         PlayerMovement.Instance.isCanMoveInput = false;
         Debug.Log("You entering the alarm area");

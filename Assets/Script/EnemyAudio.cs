@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyAudio : MonoBehaviour
 {
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource audioSource, audioSourceScream, audioSourceSlash;
     [SerializeField] List<AudioClip> audioClips;
 
     public static EnemyAudio Instance;
@@ -21,16 +21,28 @@ public class EnemyAudio : MonoBehaviour
         audioSource.loop = loop;
         if (clipI >= 0 && clipI < audioClips.Count)
         {
-             audioSource.clip = audioClips[clipI];
-             audioSource.Play();
+            audioSource.clip = audioClips[clipI];
+            audioSource.Play();
         }
-           
+
         else return;
-        
+
     }
 
     public void StopSound()
     {
         audioSource.Stop();
+    }
+
+    public void PlayScreamSound()
+    {
+        audioSourceScream.Stop();
+        audioSourceScream.Play();
+    }
+
+    public void PlaySlashSound()
+    {
+        audioSourceSlash.Stop();
+        audioSourceSlash.Play();
     }
 }

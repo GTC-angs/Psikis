@@ -5,13 +5,15 @@ using System.Collections.Generic;
 
 using TMPro;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 public class CutScene001 : MonoBehaviour
 {
-
     public CanvasGroup CG_bg, CG_textClock, CG_textBase;
     public TMP_Text clockText, baseText;
     public AudioSource audioSource;
     public List<AudioClip> audioClips;
+
+    [SerializeField] Animator textClockAnim;
     // sound indx : clock, alarm
     void Start()
     {
@@ -32,15 +34,18 @@ public class CutScene001 : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             yield return new WaitForSeconds(4f / 5);
+
+
             if (CG_textClock.alpha == 0) CG_textClock.alpha = 1f;
             else CG_textClock.alpha = 0f;
+
         }
 
         CG_bg.alpha = 0;
         CG_textClock.alpha = 1f;
 
         // change to 07:00
-        clockText.text = "07:00";
+        clockText.text = "06:00";
         CG_bg.alpha = 1f;
 
         // suara alarm bunyi
@@ -55,11 +60,24 @@ public class CutScene001 : MonoBehaviour
         StartCoroutine(Hide(2f));
     }
 
+
     IEnumerator Hide(float dlay)
     {
+        textClockAnim.speed = 0;
         yield return new WaitForSeconds(dlay);
         audioSource.Stop();
-        SceneManager.UnloadSceneAsync("Cutscene001");
+        CG_bg.DOFade(0, 1.5f).OnComplete(() =>
+        {
+            float time = 0;
+            while (time < 2f)
+            {
+                time += Time.deltaTime;
+            }
+
+            SceneManager.UnloadSceneAsync("Cutscene001");
+
+        });
+
     }
 
 

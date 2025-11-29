@@ -55,12 +55,12 @@ public class DialogManager : MonoBehaviour
     {
         if (!isDialog || !isCanClickNextDialog) return;
 
-        if (isTyping && Input.GetMouseButtonDown(0))
+        if (isTyping && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)))
         {
             skipTyping = true;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log(indexDialog);
             if (!isCanClickNextDialog) return;

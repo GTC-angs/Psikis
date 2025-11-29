@@ -70,6 +70,7 @@ public class EnemyCollision : MonoBehaviour
         {
             Debug.LogWarning("You hit the boss");
             EnemyStat.Instance.health--;
+            EnemyAudio.Instance.PlayScreamSound();
             BossUIHUD.Instance.UpdateFillHealth();
 
             BossUIHUD.Instance.UpdateTextDialog(EnemyStat.Instance.EnemyWords[Random.Range(0, EnemyStat.Instance.EnemyWords.Count)], Random.Range(1f, 4f));

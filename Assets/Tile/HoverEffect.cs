@@ -2,12 +2,12 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
 using DG.Tweening;
-public class HoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class HoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     TMP_Text tMP_Text;
     [SerializeField] Color32 colorHover = new Color32(255, 255, 255, 255);
     [SerializeField] float hoverDuration = 0.3f;
-    [SerializeField] float xTransformHover = 10f;
+    [SerializeField] float xTransformHover = 30f;
     Color colorNormal;
     public Vector3 locationNormal;
     [SerializeField] bool changeColorWhileHover = true;
@@ -20,37 +20,47 @@ public class HoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void HoverStart()
     {
         if (changeColorWhileHover)
-            tMP_Text.CrossFadeColor(colorHover, hoverDuration, true, false);
-        MoveXText(tMP_Text, new Vector4(30, 0, 0, 0));
+        {
+            DOTween.To(
+             () => tMP_Text.color,
+             x => tMP_Text.color = x,
+             colorHover,
+             hoverDuration).SetUpdate(true);
+        }
+
+        MoveXText(tMP_Text, new Vector4(xTransformHover, 0, 0, 0));
     }
 
     public void HoverEnd()
     {
         // transform.DOMoveX(locationNormal.x, hoverDuration);
         if (changeColorWhileHover)
-            tMP_Text.CrossFadeColor(colorNormal, hoverDuration, true, false);
+        {
+            DOTween.To(
+            () => tMP_Text.color,
+            x => tMP_Text.color = x,
+            colorNormal,
+            hoverDuration).SetUpdate(true);
+        }
+
         MoveXText(tMP_Text, new Vector4(0, 0, 0, 0));
     }
 
     public void MoveXText(TMP_Text tMP_Text, Vector4 target)
     {
-
-        float t = 0f;
-        float duration = hoverDuration;
-        while (t < duration)
-        {
-            t += Time.deltaTime;
-
-            // Lerp margin
-            float lerp = t / duration;
-            tMP_Text.margin = Vector4.Lerp(tMP_Text.margin, target, lerp);
-        }
-
+        tMP_Text.DOKill();
+        DOTween.To(
+            () => tMP_Text.margin,
+            (x) => tMP_Text.margin = x,
+            target,
+            hoverDuration
+        ).SetUpdate(true);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (HomeSceneManager.Instance != null) HomeSceneManager.Instance.PlayHoverSfx();
+        if (MenuManagerHUD.Instance != null) MenuManagerHUD.Instance.PlayHoverAudio();
         HoverStart();
     }
 
@@ -58,6 +68,11 @@ public class HoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         if (HomeSceneManager.Instance != null) HomeSceneManager.Instance.PlayHoverSfx();
         HoverEnd();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (MenuManagerHUD.Instance != null) MenuManagerHUD.Instance.PlaySelectAudio();
     }
 
 }

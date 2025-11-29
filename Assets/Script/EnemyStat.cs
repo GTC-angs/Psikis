@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 
 public class EnemyStat : MonoBehaviour
@@ -17,10 +18,15 @@ public class EnemyStat : MonoBehaviour
 
     void Update()
     {
-        if(health <= 0)
+        if (health <= 0 && isAlive)
         {
             // Do something ... while enemy defeat
             isAlive = false;
+            EnemyMovement.Instance.isCanMove = false;
+            if (Scene05Manager.Instance != null)
+            {
+                Scene05Manager.Instance.WinGame();
+            }
         }
     }
 
